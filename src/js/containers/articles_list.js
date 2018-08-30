@@ -15,7 +15,7 @@ class ArticlesList extends Component {
 
     let url = "";
 
-      if (articlesArr) {
+      if (articlesArr && arr.length > 0) {
           return articlesArr.map((article, key) => {
         if (article.multimedia[0]) {
             //if object conatin url, take base url and add rest of url from given object
@@ -26,7 +26,7 @@ class ArticlesList extends Component {
           url =
             "https://www.eu-rentals.com/sites/default/files/default_images/noImg_2.jpg";
         }
-
+       
         return <div>
             <li className="article-container" key={key}>
               <div className="article-img">
@@ -52,6 +52,13 @@ class ArticlesList extends Component {
             <hr className="article-hr" />
           </div>;
       });
+    }else if (articlesArr){
+          return (<div>
+              <p className="line-1 anim-typewriter">
+                  No article has been found. Try again.
+          </p>
+          </div>
+          );
     }
   }
 
