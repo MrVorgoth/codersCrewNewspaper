@@ -9,17 +9,13 @@ class SearchBar extends Component {
         super(props);
 
         this.state = { term: "Sport"};
-        
     }
 
     onFormSubmit(event) {
         event.preventDefault();
-
         this.props.fetchArticles(this.state.term);
-        /* this.setState({ term: "" }); */
     }
     onFormChange(event){
-
         this.setState({ term: event.target.value });
     }
 
