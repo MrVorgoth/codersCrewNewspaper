@@ -27,39 +27,36 @@ class ArticlesList extends Component {
             "https://www.eu-rentals.com/sites/default/files/default_images/noImg_2.jpg";
         }
 
-        return (
-            <div>
-                <li className="article-container" key={key}>
-                    <div className="article-img">
-                        <img src={url} alt="" />
-                    </div>
-                    <div className="article-details">
-                        <span>
-                            <strong>Header:</strong> {article.snippet}
-                        </span>
-                        <span>
-                            <strong>Source:</strong> {article.source}
-                        </span>
-                        <span>
-                            <strong>Pages:</strong> {article.print_page}
-                        </span>
-                        <span>
-                            <a href={article.web_url} target="_blank">
-                                Link to the article
-                </a>
-                        </span>
-                    </div>
-                </li>
-                <hr/>
-            </div>
-         
-        );
+        return <div>
+            <li className="article-container" key={key}>
+              <div className="article-img">
+                <img src={url} alt="" />
+              </div>
+              <div className="article-details">
+                <span>
+                  <strong>Snippet:</strong> {article.snippet}
+                </span>
+                <span>
+                  <strong>Source:</strong> {article.source}
+                </span>
+                <span>
+                  <strong>Pages:</strong> {article.print_page}
+                </span>
+                <span>
+                  <a className="article-link" href={article.web_url} target="_blank">
+                    Link to the article
+                  </a>
+                </span>
+              </div>
+            </li>
+            <hr className="article-hr" />
+          </div>;
       });
     }
   }
 
   render() {
-    return <ul>{this.renderArticles()}</ul>;
+      return <ul className="article-list">{this.renderArticles()}</ul>;
   }
 }
 

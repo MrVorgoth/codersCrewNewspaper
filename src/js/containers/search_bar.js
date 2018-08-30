@@ -25,7 +25,7 @@ class SearchBar extends Component {
 
     render(){
         return <nav className="navbar navbar-light bg-light">
-            <a className="navbar-brand">Articles browser</a>
+            <a className="navbar-brand article-link">Article browser</a>
             <form onSubmit={this.onFormSubmit.bind(this)} className="form-inline">
                 <input onChange={this.onFormChange.bind(this)} value={this.state.term} className="form-control mr-sm-2" type="search" placeholder="Sport" aria-label="Search" />
               <button className="btn btn-outline-dark" type="submit">

@@ -6,7 +6,7 @@ const ROOT_URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-k
 export const FETCH_ARTICLES = "FETCH_ARTICLES";
 
 export function fetchArticles(type) {
-  const url = `${ROOT_URL}&q=${type}`;
+  const url = `${ROOT_URL}&q=${type}}&begin_date=20180125`;
   const request = axios.get(url);
 
   /*  console.log(response.data.response.docs); */
