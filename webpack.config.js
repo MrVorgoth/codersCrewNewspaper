@@ -2,15 +2,16 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    main: './src/js/index.js'
+    main: "./src/js/index.js"
   },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/'
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "./dist"),
+    publicPath: "/"
   },
-  mode: 'development',
+  mode: "development",
   devServer: {
+    historyApiFallback: true,
     contentBase: "dist",
     overlay: true
   },
@@ -18,47 +19,42 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: [
-          { loader: 'babel-loader' }
-        ],
+        use: [{ loader: "babel-loader" }],
         exclude: /node_modules/
       },
       {
         test: /\.css$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' }
-        ]
+        use: [{ loader: "style-loader" }, { loader: "css-loader" }]
       },
       {
         test: /\.scss$/,
         use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'postcss-loader' },
-          { loader: 'sass-loader' }
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "postcss-loader" },
+          { loader: "sass-loader" }
         ]
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[name].html'
+              name: "[name].html"
             }
           },
-          { loader: 'extract-loader' },
-          { loader: 'html-loader' }
+          { loader: "extract-loader" },
+          { loader: "html-loader" }
         ]
       },
       {
         test: /\.(jpg|jpeg|png|gif|ico)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              filename: 'assets/[name].[ext]'
+              filename: "assets/[name].[ext]"
             }
           }
         ]
