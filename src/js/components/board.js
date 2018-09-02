@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 import SearchBar from "../containers/search_bar";
 import ArticlesList from "../containers/articles_list";
+import { Link } from "react-router-dom";
 
 export default class Board extends Component {
   render() {
-    return <div className="article-browser-container">
-      <div className="article-search-bar">
-          <SearchBar />
-        </div>
-      <div className="article-list-container">
-          <ArticlesList />
-        </div>
-      </div>;
+    return (
+      <div>
+        <Link to="/articles">Article Browser</Link>
+      </div>
+    
+    );
   }
 }
