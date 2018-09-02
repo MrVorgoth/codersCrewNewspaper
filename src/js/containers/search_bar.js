@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchArticles } from "../actions/index";
+import { Link } from "react-router-dom";
 
 class SearchBar extends Component {
 
@@ -21,10 +22,10 @@ class SearchBar extends Component {
 
     render(){
         return <nav className="navbar navbar-light bg-light">
-            <a className="navbar-brand article-link">Article browser</a>
+            <Link to="/" className="navbar-brand article-link">Home</Link>
             <form onSubmit={this.onFormSubmit.bind(this)} className="form-inline">
                 <input onChange={this.onFormChange.bind(this)} value={this.state.term} className="form-control mr-sm-2" type="search" placeholder="Sport" aria-label="Search" />
-              <button className="btn btn-outline-dark" type="submit">
+                <button className="btn btn-outline-dark bouncy" type="submit">
                 Search
               </button>
             </form>
@@ -39,12 +40,3 @@ function mapDispatchToProps(dispatch){
 
 export default connect(null, mapDispatchToProps)(SearchBar);
 
-
-
-{/* render(){
-    return <form className="search-bar" onSubmit={this.onFormSubmit}>
-        <input placeholder="Get a six articles based on type" type="text" />
-        <button type="submit">Search</button>
-    </form>;
-
-}  */}

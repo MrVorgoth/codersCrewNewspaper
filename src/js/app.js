@@ -7,7 +7,7 @@ import { createStore, applyMiddleware } from "redux";
 import ReduxPromise from "redux-promise";
 
 
-import Board from "./components/board";
+import HomePage from "./components/home_page";
 import ArticleBrowser from './components/article_browser';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
@@ -18,7 +18,7 @@ ReactDOM.render(
     <div>
       <Switch>
           <Route path="/articles" component={ArticleBrowser}/>
-        <Route path="/" component={Board}/>
+          <Route path="/" component={HomePage}/>
       </Switch>
     </div>
     </BrowserRouter>
