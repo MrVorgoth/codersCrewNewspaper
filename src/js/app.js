@@ -15,12 +15,12 @@ const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
-    <div>
-      <Switch>
-          <Route path="/articles" component={ArticleBrowser}/>
-          <Route path="/" component={HomePage}/>
-      </Switch>
-    </div>
+      <div>
+        <Switch>
+          <Route path="/article-search" component={ArticleBrowser} />
+          <Route path="/" component={HomePage} />
+        </Switch>
+      </div>
     </BrowserRouter>
   </Provider>,
   document.getElementById("react-root")
