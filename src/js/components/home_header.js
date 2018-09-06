@@ -37,24 +37,33 @@ export default class HomeHeader extends Component {
                   </a>
                 </li>
                 <li>
-                  <Link className="hd-link" to="/article-search">
-                    Articles
-                  <span className="line -right" />
+                  <a className="hd-link" href="#services">
+                    <span className="line -right" />
                     <span className="line -top" />
                     <span className="line -left" />
                     <span className="line -bottom" />
-                  </Link>
+                    Services
+                  </a>
                 </li>
+                {/*  <li>
+                <Link className="hd-link" to="/article-search">
+                  Articles
+                  <span className="line -right" />
+                  <span className="line -top" />
+                  <span className="line -left" />
+                  <span className="line -bottom" />
+                </Link>
+              </li>
 
-                <li>
-                  <Link className="hd-link" to="/movie-search">
-                    Movies
+              <li>
+                <Link className="hd-link" to="/movie-search">
+                  Movies
                   <span className="line -right" />
-                    <span className="line -top" />
-                    <span className="line -left" />
-                    <span className="line -bottom" />
-                  </Link>
-                </li>
+                  <span className="line -top" />
+                  <span className="line -left" />
+                  <span className="line -bottom" />
+                </Link>
+              </li> */}
               </ul>
             </div>
           </nav>
