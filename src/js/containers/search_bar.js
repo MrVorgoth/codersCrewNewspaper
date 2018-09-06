@@ -19,10 +19,11 @@ class SearchBar extends Component {
     onFormChange(event){
         this.setState({ term: event.target.value });
     }
+    
 
     render(){
         return <nav className="navbar navbar-light bg-light">
-            <Link to="/" className="navbar-brand article-link">Home</Link>
+            <Link to="/" className="navbar-brand article-link">Article browser</Link>
             <form onSubmit={this.onFormSubmit.bind(this)} className="form-inline">
                 <input onChange={this.onFormChange.bind(this)} value={this.state.term} className="form-control mr-sm-2" type="search" placeholder="Sport" aria-label="Search" />
                 <button className="btn btn-outline-dark bouncy" type="submit">
