@@ -5,7 +5,7 @@ export default function (state = [], action) {
       case FETCH_MOIVES:
 
 
-        console.log(action.payload.data.results); 
+        
         return [action.payload.data.results];
     }
     return state;
