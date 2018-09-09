@@ -6,20 +6,13 @@ import { fetchArticles } from "../actions/index";
 import NoResult from "../components/no_result";
 
 class ArticlesList extends Component {
-
   componentDidMount() {
     this.props.fetchArticles("Sport");
     this.renderArticles(this.getData());
   }
 
-
   getData() {
     let data = this.props.articles[0];
-    console.log(data)
-
-    /* if (data && data.length > 6) {
-      data = data.splice(0, 6);
-    } */
     return data;
   }
 
@@ -50,9 +43,10 @@ class ArticlesList extends Component {
 function mapStateToProps({ articles }) {
   return { articles };
 }
-
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchArticles }, dispatch);
 }
-
-export default connect(mapStateToProps, mapDispatchToProps)(ArticlesList);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ArticlesList);

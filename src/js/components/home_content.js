@@ -1,10 +1,32 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import ScrollButton from "./scroll_button";
+
+export function scroll(){
+  jQuery(function ($) {
+    $('.arrow-scroll-container').click(function () { $.scrollTo($('body'), 1000); });
+    $('.scroll-to-services').click(function () { $.scrollTo($("#scroll-services"), 1000); });
+  });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 250) {
+      $(".arrow-scroll-container").fadeIn();
+    }
+    else {
+      $(".arrow-scroll-container").fadeOut();
+    }
+  }
+  ); 
+}
+
 
 export default class HomeContent extends Component {
+  componentDidMount(){
+    scroll();
+  }
   render() {
     return <div id="home-content">
-        <a name="services" />
+        <a href="#" id="scroll-services" /> 
         <h1 className="offer">Services Overview</h1>
         <div className="list-services">
           <Link className="service-link" to="/article-search">
@@ -28,6 +50,7 @@ export default class HomeContent extends Component {
             </div>
           </Link>
         </div>
+        <ScrollButton/>
       </div>;
   }
 }

@@ -16,7 +16,6 @@ class TopStoriesList extends Component{
 
     getData(){
         let data = this.props.topStories[0];
-        console.log(data)
         return data;
     }
 
@@ -24,7 +23,7 @@ class TopStoriesList extends Component{
     renderTopStories(topStories){
         if (topStories && topStories.length > 0){
             return topStories.map((topStory, index) => {
-                if (topStory.multimedia.length < 5 ) {
+                if (topStory.multimedia.length < 5 || topStory.multimedia[4].height < 300) {
                   return;
                 } else {
                   return <TopStoriesItem topStory={topStory} key={index} />;

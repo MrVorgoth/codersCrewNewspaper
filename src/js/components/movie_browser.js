@@ -3,6 +3,7 @@ import MovieSearchBar from '../containers/movie_search_bar';
 import MoviesList from '../containers/movies_list';
 
 export default class BookBrowser extends Component {
+    
     render() {
         return <div className="article-browser-container">
             <div className="article-search-bar">
@@ -10,7 +11,7 @@ export default class BookBrowser extends Component {
             </div>
           <div className="article-list-container">
                 <MoviesList />
-            </div> 
+            </div>   
           </div>;
     }
 

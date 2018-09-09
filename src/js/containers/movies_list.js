@@ -14,9 +14,8 @@ class MoviesList extends Component {
   }
 
   getData() {
-    let data;
-      console.log(this.props.movies[0])
-    return (data = this.props.movies[0]);
+      let data = this.props.movies[0]
+    return data;
   }
 
   renderMovieReview(movies) {

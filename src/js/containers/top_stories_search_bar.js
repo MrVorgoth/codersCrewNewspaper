@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 
 import { onClicked } from "./article_search_bar";
 import Select from "react-select";
+import ScrollButton from "../components/scroll_button";
+import { scroll } from "../components/home_content";
 
 const section = [
   { label: "world", value: "world" },
@@ -38,6 +40,10 @@ class TopStoriesSearchBar extends Component {
     super(props);
 
     this.state = { term: "home" };
+  }
+
+  componentDidMount() {
+    scroll();
   }
 
   componentDidUpdate() {
@@ -86,6 +92,7 @@ class TopStoriesSearchBar extends Component {
             options={section}
           />
         </div>
+        <ScrollButton />
       </nav>
     );
   }
