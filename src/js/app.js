@@ -9,6 +9,7 @@ import reducers from "../js/reducers";
 import HomePage from "./components/home_page";
 import ArticleBrowser from "./components/article_browser";
 import MovieBrowser from "./components/movie_browser";
+import TopStoriesBrowser from "./components/top_stories_browser";
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
@@ -19,6 +20,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/article-search" component={ArticleBrowser} />
           <Route path="/movie-search" component={MovieBrowser} />
+          <Route path="/top-stories-search" component={TopStoriesBrowser}/>
           <Route path="/" component={HomePage} />
         </Switch>
       </div>

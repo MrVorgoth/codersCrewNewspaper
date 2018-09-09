@@ -25,9 +25,8 @@ class MoviesList extends Component {
         
         if(movies && movies.length > 0){
           return movies.map( (movie, index) =>{
-              console.log(movie.link)
               
-               return <MovieItem key={index} headline={movie.headline} title={movie.display_title} author={movie.byline} url={movie.link.url} linkText={movie.link.suggested_link_text} pubDate={movie.publication_date} summary={movie.summary_short} />
+              return <MovieItem key={index} headline={movie.headline} title={movie.display_title} author={movie.byline} url={movie.link.url} linkText={movie.link.suggested_link_text} pubDate={movie.publication_date} summary={movie.summary_short} />
            })
         }
         else if(movies)

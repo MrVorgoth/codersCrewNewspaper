@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Sticky from "react-stickynode";
 
 export default class HomeHeader extends Component {
   render() {
@@ -10,9 +9,6 @@ export default class HomeHeader extends Component {
         <div className="bg-img">
           <div className="overlay" />
         </div>
-        <Sticky enabled={true} top={0} bottomBoundary={1100}>
-
-
           <nav id="home-nav" className="navabar nav-transparent">
             <div className="nav-container">
               <div className="navbar-header">
@@ -67,7 +63,6 @@ export default class HomeHeader extends Component {
               </ul>
             </div>
           </nav>
-        </Sticky>
       </header>
     );
   }

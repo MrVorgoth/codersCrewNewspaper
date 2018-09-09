@@ -31,11 +31,11 @@ export function fetchMovies(title){
 }
 
 
-const TOP_STORIES_ROOT_URL = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
+const TOP_STORIES_ROOT_URL = `https://api.nytimes.com/svc/topstories/v2/`;
 
-export const FETCH_TOP_STORIES = "TOP_STORIES";
+export const FETCH_TOP_STORIES = "FETCH_TOP_STORIES";
 export function fetchTopStories(section){
-  const url = `${TOP_STORIES_ROOT_URL}&={section}`;
+  const url = `${TOP_STORIES_ROOT_URL}${section}.json?api-key=${API_KEY}`;
 
   const request = axios.get(url);
 
