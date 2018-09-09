@@ -285,7 +285,7 @@
                     
                     li {
                         list-style: none;
-                        margin: 0 60px 0 0;
+                        margin: 0 60px 20px 0;
                     }
                     
                     li:first-child {
@@ -479,7 +479,8 @@
                         .navbar-right>li {
                             margin: auto;
                             padding-left: 20px;
-                            padding-right: 20px
+                            padding-right: 20px;
+                            margin-bottom: 15px;
                         }
                     }
                     
@@ -566,6 +567,7 @@
                     
                     #home-content {
                         height: 100%;
+                        margin-bottom: 250px;
                     }
                     
                     @media screen and (max-width: 1270px) {
@@ -632,7 +634,7 @@
                     .home-footer {
                         height: 100%;
                         background-color: #6e6d6d;
-                        margin-top: 250px;
+                        margin-top: 120px;
                         flex-wrap: wrap;
                     }
                     
@@ -675,12 +677,31 @@
                     }
                     
                     .all-rights {
-                        margin-top: 30px;
+                        margin-top: 20px;
                         margin-left: auto;
                         margin-right: auto;
                         display: flex;
+                        flex-direction: column;
                         justify-content: center;
-                        width: 75%
+                        width: 75%;
+                        padding: 0 0 20px 0;
+                    }
+                    
+                    .summary-terms {
+                        text-align: center;
+                    }
+                    
+                    .summary-terms>a {
+                        color: white;
+                        font-size: 1.2em;
+                        &:hover {
+                            color: #f26522;
+                        }
+                    }
+                    
+                    .summary-terms>span {
+                        font-size: 1.2em;
+                        color: white;
                     }
                     
                     .copyright {
@@ -691,6 +712,15 @@
                     .logo-footer {
                         width: 50%;
                         height: 100%;
+                    }
+                    
+                    @media screen and (max-width: 454px) {
+                        .summary-terms>a {
+                            font-size: .8em;
+                        }
+                        .summary-terms>span {
+                            font-size: .8em;
+                        }
                     }
                     
                     @media screen and (max-width: 1250px) {
@@ -851,9 +881,15 @@
                     
                     .nav-link {
                         background-color: #505050 !important;
+                        padding: 0;
+                        margin: 0;
                         &:hover {
                             color: #f26522 !important;
                         }
+                    }
+                    
+                    .nav-item {
+                        margin: 0;
                     }
                     
                     .dropdown .dropdown-menu .dropdown-item:hover {
@@ -1000,7 +1036,7 @@
                         height: 100px;
                         position: fixed;
                         right: 40px;
-                        bottom: 200px;
+                        bottom: 270px;
                         @include arrow-transitions(180deg);
                         &:hover {
                             cursor: pointer;
@@ -1051,19 +1087,21 @@
                     @media screen and (max-width: 800px) {
                         .arrow-scroll-container {
                             right: -40px;
-                            bottom: 260px;
+                            bottom: 270px;
                         }
                     }
                     
                     .highlight {
+                        width: fit-content;
                         text-align: center;
                         font-weight: 900;
                         line-height: 128%;
-                        color: #d4d4d4;
+                        color: white;
                         font-size: 3.3rem;
                         margin-top: 270px;
                         padding: 0, 20px;
-                        left: 200px;
+                        margin-left: auto;
+                        margin-right: auto;
                     }
                     
                     @media screen and (max-width: 1100px) {

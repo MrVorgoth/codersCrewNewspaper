@@ -38,7 +38,7 @@ export default class HomeHeader extends Component {
             </ul>
           </div>
         </nav>
-        <h1 className="highlight">
+      <h1 className="highlight">
           CodersCrewNewspaper <br /> Your Daily Dose Of <br /> Information
         </h1>
       </header>;

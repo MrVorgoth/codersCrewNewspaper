@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ScrollButton from "./scroll_button";
 
-export function scroll(){
+export function scroll() {
   jQuery(function ($) {
     $('.arrow-scroll-container').click(function () { $.scrollTo($('body'), 1000); });
     $('.scroll-to-services').click(function () { $.scrollTo($("#scroll-services"), 1000); });
@@ -16,14 +16,14 @@ export function scroll(){
       $(".arrow-scroll-container").fadeOut();
     }
   }
-  ); 
-}
+  );
+} 
 
 
 export default class HomeContent extends Component {
   componentDidMount(){
     scroll();
-  }
+  }  
   render() {
     return <div id="home-content">
         <a href="#" id="scroll-services" /> 
