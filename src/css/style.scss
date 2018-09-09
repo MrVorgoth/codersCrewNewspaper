@@ -223,7 +223,7 @@
                     
                     // HOME PAGE STYLE
                     .bg-img {
-                        background-image: url(./img/background1.jpg);
+                        background-image: url(../assets/background1.jpg);
                         position: absolute;
                         left: 0;
                         top: 0;
@@ -1045,5 +1045,12 @@
                                 opacity: 0.4 * $i;
                                 top: 15 + (100% * $i/5);
                             }
+                        }
+                    }
+                    
+                    @media screen and (max-width: 800px) {
+                        .arrow-scroll-container {
+                            right: -40px;
+                            bottom: 280px;
                         }
                     }
