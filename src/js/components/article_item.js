@@ -6,7 +6,19 @@ export default props => {
     <Fragment>
       <li className="article-container" key={props.index}>
         <div className="article-img">
-          <img src={props.url} alt="" />
+          <div className="link-wrapper">
+            <figure>
+              <img className="img" alt="" src={props.url} />
+              <figcaption>
+                <h3>Something</h3>
+                <p>Something Something Something </p>
+                <p>
+                  <a href='' target="_blank">Something</a>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          
         </div>
         <div className="article-details">
           <span>
