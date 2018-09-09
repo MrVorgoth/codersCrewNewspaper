@@ -16,14 +16,14 @@ export default class HomeContent extends Component {
 
           <Link className="service-link" to="/top-stories-search">
             <div className="service-item">
-              <i className="fas fa-video ico" />
+              <i className="far fa-paper-plane ico" />
               <p className="service-text">TOP STORIES SEARCH API</p>
             </div>
           </Link>
 
           <Link className="service-link" to="/movie-search">
             <div className="service-item">
-              <i className="fas fa-book ico" />
+              <i className="fas fa-film ico" />
               <p className="service-text">MOVIE SEARCH API</p>
             </div>
           </Link>

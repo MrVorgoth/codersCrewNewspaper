@@ -18,8 +18,6 @@
                     .article-search-bar {
                         width: 100%;
                         margin: 20px;
-                        /* text-align: right; */
-                        /* background-color: #afafaf; */
                         border-radius: 5px;
                     }
                     
@@ -50,8 +48,6 @@
                         margin-bottom: 20px;
                     }
                     
-                    .article-list-container {}
-                    
                     .article-container {
                         display: flex;
                         flex-direction: row;
@@ -77,7 +73,6 @@
                     .article-details {
                         display: flex;
                         flex-direction: column;
-                        /* width: 50%; */
                         padding: 0px 10px 10px 20px;
                         width: 100%;
                     }
@@ -112,30 +107,14 @@
                         text-shadow: 0;
                         &:hover {
                             background-size: 100% 2px;
-                            /*  text-shadow: 0 2px 3px rgb(0, 0, 0); */
                         }
                     }
-                    /* .article-link {
-                            box-shadow: 0 1px 0 darkred;
-                            color: black;
-                            position: relative;
-                            text-decoration: none;
-                            text-transform: uppercase;
-                        }
-                        
-                        .article-link:hover {
-                            cursor: pointer;
-                            text-decoration: none;
-                            color: rgb(141, 141, 141);
-                        }
-                        
-                        .article-link:active {
-                            box-shadow: none;
-                            top: 2px;
-                        } */
                     
                     .navbar-brand {
                         font-size: 23px;
+                        &:hover {
+                            color: #f26522 !important;
+                        }
                     }
                     
                     .article-hr {
@@ -333,7 +312,6 @@
                         position: fixed;
                         cursor: pointer;
                         top: 6vh;
-                        /* left: 50%; */
                         color: rgb(212, 212, 212);
                         transform: translate3d(-50%, -50%, 0);
                         padding: $pad $extra;
@@ -342,7 +320,6 @@
                         font-size: 1.5em;
                         letter-spacing: 0.07em;
                         .text {
-                            // padding: 0 0.3em;
                             font-family: proxima-nova;
                             transform: translate3d(0, $pad, 0);
                             display: block;
@@ -441,16 +418,9 @@
                     
                     .navbar-header {
                         margin: -40px auto 0 60px;
-                        /* width: 500px;
-                        height: 135px; */
                         width: 30%;
                         padding: 0;
                     }
-                    /*  .navbar-brand {
-                        margin: 0;
-                        padding: 0;
-                    }
-                     */
                     
                     .logo-img {
                         margin: 0;
@@ -560,7 +530,6 @@
                     }
                     
                     .list-services {
-                        /* font-family: 'Titillium Web', sans-serif; */
                         font-weight: 700;
                         font-size: 18px;
                         width: 60%;
@@ -599,8 +568,6 @@
                         }
                         .service-text {
                             color: rgb(242, 101, 34);
-                            ;
-                            ;
                         }
                     }
                     
@@ -803,7 +770,6 @@
                             border-color: #f26522;
                             background-color: #505050;
                         }
-                        &::active {}
                     }
                     
                     .navbar {
@@ -832,8 +798,6 @@
                     .spa {
                         margin-right: 5px;
                         margin-top: 3px;
-                        /* float: right;*/
-                        /* font-size: 18px!important; */
                         margin-left: auto;
                     }
                     
@@ -898,13 +862,6 @@
                             color: #f26522 !important;
                         }
                     }
-                    /*   .dropdown-item:hover {
-                        background-color: #f26522;
-                        color: white !important;
-                        .navbar .dropdown-menu a {
-                            color: white !important;
-                        }
-                    } */
                     
                     .dropdown .dropdown-menu .dropdown-item:hover {
                         color: rgb(255, 255, 255) !important;
@@ -939,7 +896,6 @@
                     }
                     
                     figure:hover figcaption {
-                        /*        -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100); */
                         filter: alpha(opacity=100);
                         opacity: 1;
                         -webkit-transform: rotate(0);
@@ -951,7 +907,6 @@
                     }
                     
                     figcaption {
-                        /*  -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0); */
                         filter: alpha(opacity=0);
                         opacity: 0;
                         position: absolute;
@@ -978,7 +933,6 @@
                     }
                     
                     figcaption h3 {
-                        /*  font-family: 'Open sans'; */
                         font-weight: 400;
                         color: #f3b204;
                         padding: 10px 20px;
@@ -1000,7 +954,6 @@
                     }
                     
                     figcaption p {
-                        /* font-family: 'Open sans'; */
                         padding: 10px 20px;
                         margin-bottom: 0;
                         margin-top: 20px;

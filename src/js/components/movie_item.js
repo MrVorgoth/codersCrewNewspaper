@@ -8,8 +8,8 @@ export default props => {
         <h3 className="film-title">
           <strong>{props.movie.display_title}</strong>
         </h3>
-        <p><strong>Headline: </strong> {props.movie.headline}</p>
-        <p><strong>Summary: </strong>{props.movie.summary_short}</p>
+        <h4><strong>{props.movie.headline}</strong></h4>
+        <p>{props.movie.summary_short}</p>
         <p>
           <strong>Author:</strong> {props.movie.byline}
         </p>
