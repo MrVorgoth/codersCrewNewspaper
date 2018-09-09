@@ -15,6 +15,7 @@ class ArticlesList extends Component {
 
   getData() {
     let data = this.props.articles[0];
+    console.log(data)
 
     /* if (data && data.length > 6) {
       data = data.splice(0, 6);

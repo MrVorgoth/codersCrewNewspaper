@@ -18,7 +18,7 @@ export default props=>{
 
                   <p>
                     <a href={props.topStory.url} target="_blank">
-                      {props.topStory.item_type}
+                      Read More
                     </a>
                   </p>
                 </figcaption>
@@ -28,8 +28,8 @@ export default props=>{
 
           <div className="article-details">
             <span>
-              <strong>Headline: </strong>
-              {props.topStory.title}
+            <h3>{props.topStory.title}</h3>
+              
             </span>
             <span>
               <strong>Abstract: </strong>
@@ -40,7 +40,7 @@ export default props=>{
               {props.topStory.byline}
             </span>
             <span>
-              <strong>Publication date: </strong>
+              <strong>Date of publication: </strong>
               {props.topStory.published_date.slice(0, 10)}
             </span>
             <span />

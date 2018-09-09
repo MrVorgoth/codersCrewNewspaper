@@ -13,7 +13,7 @@ export default props => {
         <p>
           <strong>Author:</strong> {props.movie.byline}
         </p>
-        <p><strong>Publictation date:</strong> {props.movie.publication_date}</p>
+        <p><strong>Date of publication: </strong> {props.movie.publication_date}</p>
         <a style={{ fontSize: "1rem" }} className="article-link" href={props.movie.link.url}><strong> {props.movie.link.suggested_link_text}</strong> </a>
       </li>
       <hr className="article-hr" />
