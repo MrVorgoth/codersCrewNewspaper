@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { fetchMovies } from "../actions";
 import { Link } from "react-router-dom";
-import Sticky from "react-stickynode";
 import ScrollButton from "../components/scroll_button";
 import { scroll } from "../components/home_content";
 
@@ -28,7 +27,7 @@ class MovieSearchBar extends Component {
   }
 
   render() {
-    return <Sticky>
+    return(
         <nav className="navbar navbar-dark bg-dark">
           <Link to="/" className="navbar-brand bar-link">
             CodersCrewNewspaper
@@ -62,7 +61,7 @@ class MovieSearchBar extends Component {
             </button>
           </form>
         </nav>
-      </Sticky>;
+    );
   }
 }
 
