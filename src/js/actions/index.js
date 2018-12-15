@@ -9,6 +9,5 @@ export function fetchArticles(type) {
   const url = `${ROOT_URL}&q=${type}}&begin_date=20180125`;
   const request = axios.get(url);
 
-  /*  console.log(response.data.response.docs); */
   return { type: FETCH_ARTICLES, payload: request };
 }
