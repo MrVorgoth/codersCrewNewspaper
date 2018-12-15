@@ -22,7 +22,7 @@ export function fetchArticles(type) {
 const MOVIE_ROOT_URL = `https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=${API_KEY}`;
 
 export const FETCH_MOIVES = "FETCH_MOIVES";
-export function fetchMovies(title) {
+export function fetchMovies(title){
   const url = `${MOVIE_ROOT_URL}&query=${_.replace(title, " ", "+")}`
 
   const request = axios.get(url);
@@ -30,3 +30,14 @@ export function fetchMovies(title) {
   return { type: FETCH_MOIVES, payload: request };
 }
 
+
+const TOP_STORIES_ROOT_URL = `https://api.nytimes.com/svc/topstories/v2/`;
+
+export const FETCH_TOP_STORIES = "FETCH_TOP_STORIES";
+export function fetchTopStories(section){
+  const url = `${TOP_STORIES_ROOT_URL}${section}.json?api-key=${API_KEY}`;
+
+  const request = axios.get(url);
+
+  return {type: FETCH_TOP_STORIES, payload: request };
+}

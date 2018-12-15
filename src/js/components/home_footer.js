@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+
 
 export default class HomeFooter extends Component {
     render() {
@@ -33,10 +33,16 @@ export default class HomeFooter extends Component {
               </div>
             </div>
             <div className="all-rights">
-              <p className="copyright">
-                COPYRIGHT © 2018. ALL RIGHTS RESERVED. DESIGNED BY
-                CODERCREWNWESPAPER
-              </p>
+              <div className="copyright">
+               © 2018 CodersCrewNewspaper     
+              </div>
+              <div className="summary-terms">
+              <a href="">Terms of Service</a>
+              <span> | </span>
+              <a href="">Privacy Policy</a>
+              </div>
+              
+            
             </div>
           </div>;
     }
